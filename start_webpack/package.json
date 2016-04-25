@@ -1,0 +1,15 @@
+{
+  "name": "start_webpack",
+  "version": "0.0.1",
+  "description": " 看看这东西以后是怎么跟vuejs配合起来的.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vuejs",
+    "webpack"
+  ],
+  "author": "whatlife",
+  "license": "MIT"
+}
