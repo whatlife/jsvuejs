@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js 快速入门</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>Vue demo</h1>
+            <div id="app">
+                <h2>v-model</h2>
+                <div>{{message + 'vue is awesome'}}</div>
+                <div>{{message.split('').reverse().join('') }}</div>
+                <input type="text" name="" v-model="message" id="">
+                <hr>
+                <select v-model="selected" multiple>
+                    <option selected>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+                <br>
+                <span>Selected: {{ selected | json }}</span>
+                <hr>
+                <h2>v-for</h2>
+                <table class="table table-hover table-bordered">
+                    <tr v-for="book in books ">
+                        <td>{{book.id}}</td>
+                        <td>{{book.name}}</td>
+                        <td>{{book.author}}</td>
+                        <td>{{book.price}}</td>
+                        <td class="text-right">
+                            <template v-if="book.id%2==0">
+                                <button type="button" class="btn btn-success btn-xs" @click="delBook(book)">删除</button>
+                            </template>
+                            <template v-else>
+                                <button type="button" class="btn btn-danger btn-xs" @click="delBook(book)">删除</button>
+                            </template>
+                        </td>
+                    </tr>
+                </table>
+                <hr>
+                <h2>v-on</h2>
+                <button class="btn btn-primary btn-small" v-on:click="showVue">try to click me.</button>
+                <button class="btn btn-primary btn-small" @click="showVue">like</button>
+                <hr>
+                <div id="add-book">
+                    <legend>添加书籍</legend>
+                    <div class="form-group">
+                        <label for="">书名</label>
+                        <input type="text" class="form-control" v-model="book.name">
+                    </div>
+                    <div class="form-group">
+                        <label for="">作者</label>
+                        <input type="text" class="form-control" v-model="book.author">
+                    </div>
+                    <div class="form-group">
+                        <label for="">价格</label>
+                        <input type="text" class="form-control" v-model="book.price">
+                    </div>
+                    <button class="btn btn-primary btn-block" v-on:click="addBook()">添加</button>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

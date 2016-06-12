@@ -1,0 +1,25 @@
+{
+  "name": "vuestart",
+  "version": "0.0.1",
+  "description": "vue demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whatlife/jsvuejs.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "whatlife",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/whatlife/jsvuejs/issues"
+  },
+  "homepage": "https://github.com/whatlife/jsvuejs#readme",
+  "devDependencies": {
+    "vue": "^1.0.24"
+  }
+}
