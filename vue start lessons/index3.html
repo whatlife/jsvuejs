@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue js</title>
+</head>
+<style>
+    .error {
+        color: #f00;
+    }
+
+    button {
+        display: block;
+    }
+</style>
+<body>
+<div id="app">
+    <form action="demo.html" @submit.prevent="submitForm">
+        <button>submit</button>
+    </form>
+    <button type="button" @click="upDataCount">Click Count {{ count }}</button>
+</div>
+<script src="vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            count: 0
+        },
+        methods: {
+            submitForm: function () {
+                alert('click the button');
+            }       ,
+            upDataCount: function () {
+                this.count += 1;
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue js</title>
+</head>
+<style>
+    .error {
+        color: #f00;
+    }
+    button {
+        display: block;
+    }
+</style>
+<body>
+<div id="app">
+    <form action="">
+        <div class="error" v-if="!message">You must enter a msg.</div>
+        <div class="error" v-show="!message">You must enter a msg.</div>
+        <textarea v-model="message"></textarea>
+        <button v-show="message">sent message</button>
+    </form>
+
+
+<pre>
+message: {{ $data | json }}
+</pre>
+</div>
+<script src="vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: ''
+        }
+
+    });
+</script>
+</body>
+</html>
