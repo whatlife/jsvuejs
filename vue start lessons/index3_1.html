@@ -18,22 +18,26 @@
 <div id="app">
     <!--<button class="weui_btn weui_btn_mini weui_btn_primary" type="button" @click="upDataCount">支持 {{ count }}</button>-->
     <!--<button class="weui_btn weui_btn_mini weui_btn_default weui_btn_warn" type="button" @click="count += 1">反对 {{ count }}</button>-->
-    <counter heading="up" styles="green" ></counter>
-    <counter heading="down" styles="red" ></counter>
+    <counter heading="up" styles="green"></counter>
+    <counter heading="down" styles="red"></counter>
 
     <template id="counterTemplate">
         <h1> {{ heading }}</h1>
         <button @click=" count += 1" class="weui_btn" style="background-color: {{ styles }}">{{ count
-            }}</button>
+            }}
+        </button>
     </template>
 </div>
-<script src="vue.min.js"></script>
+<p> vue.js 非压缩版本，出错时有友好的提示</p>
+<p> vue devtools chrome插件，运行需要启动服务器</p>
+<!--<script src="vue.min.js"></script>-->
+<script src="//cdn.bootcss.com/vue/1.0.24/vue.js"></script>
 <script>
     Vue.component('counter', {
         template: '#counterTemplate',
         props: ['heading', 'styles'],
         data: function () {
-            return { count: 0 };
+            return {count: 0};
         }
     });
     new Vue({
