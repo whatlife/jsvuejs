@@ -6,24 +6,20 @@
             <h2 style="line-height: 36px; color: #20A0FF">{{title}} 总数： {{total}}</h2>
         </div>
 
-        <el-row type="flex" class="row-bg" justify="space-around">
-            <el-col :span="12" v-for="article in articles">
+        <div class="row clearfix">
+            <div class="demo" v-for="article in articles">
                 <div class="grid-content bg-purple">
+                    <a :href=article.alt target="_blank" title="电影详情">
+                        <img :src=article.images.medium>
+                    </a>
                     <h3> {{article.title}} {{article.original_title}} <span class="small">{{article.year}}</span></h3>
                     <p>类型：{{article.genres}}</p>
-                    <a :href=article.alt target="_blank" title="电影详情">
-                        <img :src=article.images.small>
-                    </a>
-                </div>
-            </el-col>
-        </el-row>
 
-        <div class="row clearfix">
-            <div class="demo" v-for="article in articles">1</div>
+                </div>
+            </div>
         </div>
 
-        <a> written by {{ author }} </a>
-        <p> 感谢 <a href="https://github.com/showonne">showonne</a>大神的技术指导</p>
+
     </div>
 </template>
 
@@ -61,13 +57,22 @@
 </script>
 
 <style lang="sass">
+    $background: #f8f8f8;
     * {
         box-sizing:border-box;
-        }
-.demo {
-    width: 25%;
-    float: left;
-
     }
-
+    .demo {
+        width: 25%;
+        float:left;
+        text-align:center;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        height: 300px;
+        overflow:hidden;
+            margin-bottom: 20px;
+        &:nth-child(odd) {
+            background-color: $background;
+        }
+    }
 </style>
