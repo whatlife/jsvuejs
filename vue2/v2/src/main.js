@@ -3,7 +3,9 @@ import App from './App.vue';
 import VueRouter from "vue-router";
 import VueResource from 'vue-resource';
 import Element from 'element-ui';
+import MintUI from 'mint-ui';
 import 'element-ui/lib/theme-default/index.css';
+import 'mint-ui/lib/style.css';
 
 
 Vue.config.debug = true;
@@ -12,6 +14,7 @@ Vue.use(VueRouter);
 Vue.use(VueResource);
 
 Vue.use(Element);
+Vue.use(MintUI);
 
 // 定义组件, 也可以像教程之前教的方法从别的文件引入
 const First = { template: '<div><h2>我是第 1 个子页面</h2></div>' };

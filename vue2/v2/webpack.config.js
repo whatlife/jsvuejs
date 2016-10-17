@@ -31,6 +31,9 @@ module.exports = {
         }, {
             test: /\.(eot|woff|woff2|ttf)([\?]?.*)$/,
             loader: "file"
+        }, {
+            test: /\.sass$/,
+            loader: "style!css!sass"
         }]
     },
     resolve: {
