@@ -25,12 +25,16 @@ module.exports = {
             query: {
                 name: '[name].[ext]?[hash]'
             }
+        }, {
+            test: /\.css$/,
+            loader: "style!css"
+        }, {
+            test: /\.(eot|woff|woff2|ttf)([\?]?.*)$/,
+            loader: "file"
         }]
     },
     resolve: {
-        alias: {
-            vue: 'vue/dist/vue.js'
-        }
+        alias: {vue: 'vue/dist/vue.js'}
     },
     devServer: {
         historyApiFallback: true,
@@ -41,7 +45,7 @@ module.exports = {
 
 if (process.env.NODE_ENV === 'production') {
     module.exports.devtool = '#source-map'
-        // http://vue-loader.vuejs.org/en/workflow/production.html
+    // http://vue-loader.vuejs.org/en/workflow/production.html
     module.exports.plugins = (module.exports.plugins || []).concat([
         new webpack.DefinePlugin({
             'process.env': {
