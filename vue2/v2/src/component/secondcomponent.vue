@@ -18,8 +18,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </template>
 
@@ -27,14 +25,12 @@
     export default {
         data() {
             return {
-
                 author: "微信公众号 jinkey-love",
                 articles: [],
                 title: "",
                 total: ""
             }
         },
-
         mounted: function () {
             this.$http.jsonp('https://api.douban.com/v2/movie/top250?count=10', {}, {
                 headers: {},
@@ -62,7 +58,7 @@
         box-sizing:border-box;
     }
     .demo {
-        width: 25%;
+        width: 33.3333%;
         float:left;
         text-align:center;
         display:flex;
@@ -70,7 +66,12 @@
         justify-content: center;
         height: 300px;
         overflow:hidden;
-            margin-bottom: 20px;
+        margin-bottom: 20px;
+        font-size: 13px;
+        h3 {
+            padding: 0;
+            margin: 0;
+        }
         &:nth-child(odd) {
             background-color: $background;
         }

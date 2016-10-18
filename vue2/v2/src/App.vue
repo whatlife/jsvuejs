@@ -1,8 +1,7 @@
 <template>
     <div id="app">
-        <img src="./assets/logo.png">
+        <!--<img src="./assets/logo.png">-->
         <h1>{{ msg }}</h1>
-        <firstcomponent></firstcomponent>
         <ul>
             <li>
                 <router-link to='/'>回首页</router-link>

@@ -17,7 +17,7 @@ Vue.use(Element);
 Vue.use(MintUI);
 
 // 定义组件, 也可以像教程之前教的方法从别的文件引入
-const First = { template: '<div><h2>我是第 1 个子页面</h2></div>' };
+import firstcomponent from './component/firstcomponent.vue';
 import secondcomponent from './component/secondcomponent.vue';
 
 
@@ -29,7 +29,7 @@ const router = new VueRouter({
     routes: [
         {
             path: '/first',
-            component: First
+            component: firstcomponent
         },
         {
             path: '/second',
