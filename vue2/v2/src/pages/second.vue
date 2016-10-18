@@ -9,9 +9,9 @@
         <div class="row clearfix">
             <div class="demo" v-for="article in articles">
                 <div class="grid-content bg-purple">
-                    <a :href=article.alt target="_blank" title="电影详情">
+                    <router-link :to="'/subject/' + article.id" target="_blank" title="电影详情">
                         <img :src=article.images.medium>
-                    </a>
+                    </router-link>
                     <h3> {{article.title}} {{article.original_title}} <span class="small">{{article.year}}</span></h3>
                     <p>类型：{{article.genres}}</p>
 
@@ -25,7 +25,6 @@
     export default {
         data() {
             return {
-                author: "微信公众号 jinkey-love",
                 articles: [],
                 title: "",
                 total: ""

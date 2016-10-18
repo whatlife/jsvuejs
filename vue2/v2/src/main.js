@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import routes from './routes';   
 import App from './App.vue';
 import VueRouter from "vue-router";
 import VueResource from 'vue-resource';
@@ -17,26 +18,11 @@ Vue.use(Element);
 Vue.use(MintUI);
 
 // 定义组件, 也可以像教程之前教的方法从别的文件引入
-import firstcomponent from './component/firstcomponent.vue';
-import secondcomponent from './component/secondcomponent.vue';
+// import firstcomponent from './component/firstcomponent.vue';
+// import secondcomponent from './component/secondcomponent.vue';
+// import subjectcomponent from './component/subjectcomponent.vue';
 
-
-// 创建一个路由器实例
-// 并且配置路由规则
-const router = new VueRouter({
-    mode: 'history',
-    base: __dirname,
-    routes: [
-        {
-            path: '/first',
-            component: firstcomponent
-        },
-        {
-            path: '/second',
-            component: secondcomponent
-        }
-    ]
-});
+import router from './routes';
 
 // 现在我们可以启动应用了！
 // 路由器会创建一个 App 实例，并且挂载到选择符 #app 匹配的元素上。

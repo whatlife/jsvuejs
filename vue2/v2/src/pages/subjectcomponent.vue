@@ -1,6 +1,6 @@
 <template>
     <div slot="header" class="clearfix">
-        {{ msg }}
+        TODO: {{ msg }}
     </div>
     
 </template>
@@ -9,7 +9,7 @@
     export default{
         data(){
             return{
-                msg:'hello vue'
+                msg:'得到电影的详细信息 '
             }
         }
     }

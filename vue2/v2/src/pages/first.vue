@@ -2,7 +2,7 @@
 	<div id="firstcomponent">
 		<h1>{{title}}</h1>
 		<section class="grid" id="list">
-			<a class="item" v-for="article in articles" :href=article.alt>
+			<router-link class="item" v-for="article in articles" :to="'/subject/' + article.id" :data-id=article.id>
 				<div class="cover">
 					<div class="wp ratio3_4">
 						<img class="img-show" :src=article.images.medium style="width: 100%;">
@@ -22,7 +22,7 @@
 					</p>
 					<p class="meta">{{article.directors[0].name}}/{{article.casts[0].name}}/{{article.genres}}</p>
 				</div>
-			</a>
+			</router-link>
 		</section>
 	</div>
 </template>
