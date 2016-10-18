@@ -13,7 +13,7 @@
                 <router-link to='/second'>点我跳到 第二页</router-link>
             </li>
             <li>
-                <router-link to='/top250movie'>点我跳到 电影列表页面</router-link>
+                <router-link to='/subject'>电影详细列表</router-link>
             </li>
         </ul>
         <router-view class="view"></router-view>
@@ -23,14 +23,15 @@
 <script>
     import firstcomponent from './component/firstcomponent.vue';
     import secondcomponent from './component/firstcomponent.vue';
-//    import top250movie from './component/top250movie.vue';
+    import subject from './component/subject.vue';
+
     export default {
         data () {
             return {
                 msg: 'Hello Vue! & Hello World!'
             }
         },
-        components: { firstcomponent, secondcomponent }
+        components: { firstcomponent, secondcomponent, subject }
     }
 </script>
 

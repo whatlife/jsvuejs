@@ -2,7 +2,7 @@
 	<div id="firstcomponent">
 		<h1>{{title}}</h1>
 		<section class="grid" id="list">
-			<a class="item" v-for="article in articles" :link=article.alt>
+			<a class="item" v-for="article in articles" :href=article.alt>
 				<div class="cover">
 					<div class="wp ratio3_4">
 						<img class="img-show" :src=article.images.medium style="width: 100%;">
@@ -11,7 +11,7 @@
 				<div class="info">
 					<h3>{{article.title}}</h3>
 					<p class="rank">
-						<span class="rating-stars" data-rating="4.1">
+						<span class="rating-stars" :data-rating=article.rating.average>
                         <span class="rating-star rating-star-small-full"></span>
 						<span class="rating-star rating-star-small-full"></span>
 						<span class="rating-star rating-star-small-full"></span>
@@ -20,7 +20,7 @@
 						</span>
 						<span>{{article.rating.average}}</span>
 					</p>
-					<p class="meta">{{article.directors.name}}/{{article.casts.name}}/{{article.genres}}</p>
+					<p class="meta">{{article.directors[0].name}}/{{article.casts[0].name}}/{{article.genres}}</p>
 				</div>
 			</a>
 		</section>
@@ -42,7 +42,11 @@
                 }).then(function (response) {
                     // 这里是处理正确的回调
                     this.articles = response.data.subjects;
-                    this.title = response.data.title;
+
+                    var _title = response.data.title;
+					_title = _title.substr(0, _title.length - 3);
+					this.title = _title;
+
                     // this.articles = response.data["subjects"] 也可以
                 }, function (response) {
                     // 处理错误
@@ -114,7 +118,7 @@
 				opacity: 1;
 			}
 			.info {
-				height: 45px;
+				height: 55px;
 				overflow: hidden;
 			}
 			h3 {
@@ -136,6 +140,12 @@
 				padding: 3px 0 0 0;
 				text-align: center;
 				margin: 0;
+			}
+			.meta {
+				margin: 0;
+				padding: 0;
+				font-size: 10px;
+				
 			}
 		}
 	}

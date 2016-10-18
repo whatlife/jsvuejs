@@ -19,5 +19,6 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 # TODO
 - 翻页
+- 列表里的再循环，比如获取电影的多个主演
 - components -> header
 - components -> footer
