@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import routes from './routes';   
+import router from './routes';
 import App from './App.vue';
 import VueRouter from "vue-router";
 import VueResource from 'vue-resource';
@@ -22,7 +22,7 @@ Vue.use(MintUI);
 // import secondcomponent from './component/secondcomponent.vue';
 // import subjectcomponent from './component/subjectcomponent.vue';
 
-import router from './routes';
+
 
 // 现在我们可以启动应用了！
 // 路由器会创建一个 App 实例，并且挂载到选择符 #app 匹配的元素上。
