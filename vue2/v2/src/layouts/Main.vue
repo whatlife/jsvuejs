@@ -1,8 +1,8 @@
 <template>
 	<div class="container">
 		<img src="../assets/logo.png">
-    <p>i am in layouts </p>
-
+        <p>i am in layouts </p>
+        <VLink></VLink>
 	</div>
 </template>
 

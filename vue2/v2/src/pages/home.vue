@@ -1,9 +1,12 @@
 <template>
+    <div>
 	<router-link to="/home" exact>
 		<p class="logo">
 			<img src="../assets/logo.png">
 		</p>
 	</router-link>
+    <MainLayout></MainLayout>
+    </div>
 </template>
 
 <script>
@@ -22,11 +25,11 @@ export default {
 	body {
 		font-family: Helvetica, sans-serif;
 	}
-	
+
 	h1 {
 		color: $primary-color;
 	}
-	
+
 	.logo {
 		position: absolute;
 		top: 10px;
