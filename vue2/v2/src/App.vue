@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-     
+
 		<router-link to="/home">Home</router-link>
 		<router-link to="/first">first</router-link>
 		<router-link to="/second">second</router-link>
@@ -31,7 +31,7 @@
 	body {
 		font-family: Helvetica, sans-serif;
 	}
-	
+
 	h1 {
 		color: $primary-color;
 	}
