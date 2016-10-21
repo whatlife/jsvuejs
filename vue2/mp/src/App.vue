@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import headerNav from './views/header/index.vue';
+import headerNav from 'views/header';
 export default {
   name: 'app',
  

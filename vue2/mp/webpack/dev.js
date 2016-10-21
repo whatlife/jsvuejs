@@ -36,8 +36,10 @@ module.exports = {
     ]
   },
   resolve: {
+    extensions: ['.js', '.vue', '.json', '.css'],
     alias: {
-      'vue$': 'vue/dist/vue'
+      'vue$': 'vue/dist/vue',
+       views: path.resolve(__dirname, '../src/views'),
     }
   },
   devServer: {
