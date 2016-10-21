@@ -19,6 +19,10 @@ export default new VueRouter ({
             component: home
         },
         {
+            path: '/home',
+            component: home
+        },
+        {
             path: '/first',
             component: first
         },
