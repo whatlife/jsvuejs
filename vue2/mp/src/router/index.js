@@ -9,7 +9,7 @@ import home from 'views/home';
 import first from 'views/home/first';
 
 
-export default new Router({
+const router = new Router({
     mode: 'history',
     base: __dirname,
     routes: [
@@ -19,12 +19,19 @@ export default new Router({
         },
         {
             path: '/home',
+            name: 'home',
             component: home
         },
         {
             path: '/first',
-            component: first
+            component: first,
+            meta: {
+                goTop: true,
+                title: '电影'
+            }
         }
     ]
 
 });
+
+export default router;

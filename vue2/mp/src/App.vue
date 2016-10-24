@@ -29,11 +29,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  clear: both;
+  overflow: hidden;
+}
+#app > div {
+  margin-bottom: 20px;
 }
 #app img {
   width: 44px;
   height: 44px;
+  float: right;
 }
 
 h1, h2 {
