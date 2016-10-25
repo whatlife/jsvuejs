@@ -14,6 +14,7 @@ import computedProp from 'demos/Computed-Properties';
 import ClassAndStyleBindings from 'demos/ClassAndStyleBindings';
 import ConditionalRendering from 'demos/ConditionalRendering';
 import ListRendering from 'demos/ListRendering';
+import EventHandling from 'demos/EventHandling';
 
 const router = new Router({
     mode: 'history',
@@ -28,7 +29,8 @@ const router = new Router({
         { path: '/computedProp', name: 'computedProp', component: computedProp },
         { path: '/ClassAndStyleBindings', name: 'ClassAndStyleBindings', component: ClassAndStyleBindings },
         { path: '/ConditionalRendering', name: 'ConditionalRendering', component: ConditionalRendering },
-        { path: '/ListRendering', name: 'ListRendering', component: ListRendering }
+        { path: '/ListRendering', name: 'ListRendering', component: ListRendering },
+        { path: '/EventHandling', name: 'EventHandling', component: EventHandling }
     ]
 
 });
