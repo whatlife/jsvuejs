@@ -9,6 +9,7 @@
     <router-link to="/app6">处理用户输入2</router-link>
     <router-link to="/app7">用组件构建（应用）</router-link>
     <router-link to="/computedProp">计算属性</router-link>
+    <router-link to="/ClassAndStyleBindings">class ,style 绑定</router-link>
 
     <keep-alive>
       <transition name="fade" mode="out-in">
@@ -31,6 +32,9 @@ export default {
 </script>
 
 <style>
+  * {
+    box-sizing: border-box;
+  }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -64,5 +68,8 @@ a {
         text-align: left;
         padding: 20px;
         line-height: 1.8;
+    }
+    pre {
+      line-height: 14px;
     }
 </style>
