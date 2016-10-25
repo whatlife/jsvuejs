@@ -10,6 +10,7 @@
     <router-link to="/app7">用组件构建（应用）</router-link>
     <router-link to="/computedProp">计算属性</router-link>
     <router-link to="/ClassAndStyleBindings">class ,style 绑定</router-link>
+    <router-link to="/ConditionalRendering">条件渲染</router-link>
 
     <keep-alive>
       <transition name="fade" mode="out-in">

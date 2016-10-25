@@ -12,6 +12,7 @@ import app6 from 'demos/app-6';
 import app7 from 'demos/app-7';
 import computedProp from 'demos/Computed-Properties';
 import ClassAndStyleBindings from 'demos/ClassAndStyleBindings';
+import ConditionalRendering from 'demos/ConditionalRendering';
 
 const router = new Router({
     mode: 'history',
@@ -24,7 +25,8 @@ const router = new Router({
         { path: '/app6', name: 'app6', component: app6 },
         { path: '/app7', name: 'app7', component: app7 },
         { path: '/computedProp', name: 'computedProp', component: computedProp },
-        { path: '/ClassAndStyleBindings', name: 'ClassAndStyleBindings', component: ClassAndStyleBindings }
+        { path: '/ClassAndStyleBindings', name: 'ClassAndStyleBindings', component: ClassAndStyleBindings },
+        { path: '/ConditionalRendering', name: 'ConditionalRendering', component: ConditionalRendering }
     ]
 
 });
