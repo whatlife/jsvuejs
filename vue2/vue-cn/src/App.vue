@@ -11,6 +11,7 @@
     <router-link to="/computedProp">计算属性</router-link>
     <router-link to="/ClassAndStyleBindings">class ,style 绑定</router-link>
     <router-link to="/ConditionalRendering">条件渲染</router-link>
+    <router-link to="/ListRendering">列表渲染</router-link>
 
     <keep-alive>
       <transition name="fade" mode="out-in">
