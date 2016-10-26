@@ -14,6 +14,8 @@
     <router-link to="/ListRendering">列表渲染</router-link>
     <router-link to="/EventHandling">事件处理器</router-link>
     <router-link to="/FormInputBindings">表单控件绑定</router-link>
+    <router-link to="/components/">组件</router-link>
+    <router-link to="/componentsProps">组件 Props</router-link>
 
     <keep-alive>
       <transition name="fade" mode="out-in">

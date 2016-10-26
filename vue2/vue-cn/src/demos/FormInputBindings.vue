@@ -57,7 +57,7 @@
                 <span>selected: {{ selected }} </span>
                 <br>
                 动态选项用 v-for 渲染
-                <select v-model="selected">
+                <select v-model="selecteds">
                     <option v-for="option in options" v-bind:value="option.value">
                         {{ option.text }}
                     </option>
@@ -77,7 +77,7 @@
                 checkedNames: [],
                 picked: '',
                 selected: [],
-                selected: 'A',
+                selecteds: 'A',
                 options: [
                     { text: 'One', value: 'A' },
                     { text: 'Two', value: 'B' },
