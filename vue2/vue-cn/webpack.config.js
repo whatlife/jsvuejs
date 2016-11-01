@@ -28,11 +28,20 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.css$/,
+        loader: 'style!css',
+        exclude: /node_modules/
+      },{
+          test: /\.scss$/,
+          loader: "style!css!sass",
+          exclude: /node_modules/
       }
     ]
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json', '.css'],
+    extensions: ['.js', '.vue', '.json', '.css', '.scss'],
     alias: {
       'vue$': 'vue/dist/vue',
        demos: path.resolve(__dirname, './src/demos'),

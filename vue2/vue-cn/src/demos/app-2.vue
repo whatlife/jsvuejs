@@ -27,3 +27,11 @@ export default ({
     }
 })
 </script>
+
+<style lang="sass">
+$base: 1.4em;
+p {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    line-height: $base; 
+}
+</style>
