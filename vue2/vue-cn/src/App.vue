@@ -17,6 +17,7 @@
     <router-link to="/components/">组件</router-link>
     <router-link to="/componentsProps">组件 Props</router-link>
     <router-link to="/ReactivityInDepth">深入响应式原理/异步更新队列</router-link>
+    <router-link to="/transitions">过渡效果</router-link>
 
     <keep-alive>
       <transition name="fade" mode="out-in">

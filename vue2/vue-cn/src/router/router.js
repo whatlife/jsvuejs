@@ -19,6 +19,7 @@ import FormInputBindings from 'demos/FormInputBindings';
 import components from 'demos/components';
 import componentsProps from 'demos/componentsProps';
 import ReactivityInDepth from 'demos/ReactivityInDepth';
+import transitions from 'demos/transitions';
 
 const router = new Router({
     mode: 'history',
@@ -38,7 +39,8 @@ const router = new Router({
         { path: '/FormInputBindings', name: 'FormInputBindings', component: FormInputBindings },
         { path: '/components', name: 'components', component: components },
         { path: '/componentsProps', name: 'componentsProps', component: componentsProps },
-        { path: '/ReactivityInDepth', name: 'ReactivityInDepth', component: ReactivityInDepth }
+        { path: '/ReactivityInDepth', name: 'ReactivityInDepth', component: ReactivityInDepth },
+        { path: '/transitions', name: 'transitions', component: transitions }
     ]
 
 });
